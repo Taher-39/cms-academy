@@ -1,0 +1,26 @@
+git inin 
+
+# নতুন ব্রাঞ্চ তৈরি এবং সেখানে সুইচ করা
+git checkout -b setup-branch
+
+# ফাইলগুলো অ্যাড এবং কমিট করা
+git add .
+git commit -m "Day 1: Project foundation setup"
+
+# রিমোট রিপোজিটরি অ্যাড করা (যদি আগে না করা থাকে)
+git remote add origin https://github.com/<আপনার-username>/cms-academy.git
+
+# setup-branch টি GitHub-এ পুশ করা
+git push -u origin setup-branch
+
+# মেইন ব্রাঞ্চে ফিরে যাওয়া
+git checkout main
+
+# যদি মেইন ব্রাঞ্চ আগে তৈরি না থাকে, তবে তৈরি করে নিন
+# git branch -M main
+
+# setup-branch এর কোডগুলো main-এ মার্জ করা
+git merge setup-branch
+
+# মেইন ব্রাঞ্চের আপডেট GitHub-এ পুশ করা
+git push -u origin main
