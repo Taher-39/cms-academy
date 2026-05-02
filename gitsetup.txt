@@ -24,3 +24,23 @@ git merge setup-branch
 
 # মেইন ব্রাঞ্চের আপডেট GitHub-এ পুশ করা
 git push -u origin main
+
+
+# 0. নতুন ব্রাঞ্চ তৈরি এবং সেখানে সুইচ করা
+git checkout -b auth
+
+# ১. করা কাজগুলো অ্যাড এবং কমিট করুন
+
+git add .
+git commit -m "Day 1: Setup User model, validation and global error handler"
+
+# ২. auth ব্রাঞ্চে পুশ করুন
+git push origin auth
+
+# ৩. এখন main ব্রাঞ্চে গিয়ে মার্জ করুন
+git checkout main
+git pull origin main  # মেইন আপডেট করে নিন
+git merge auth
+
+# ৪. মেইন ব্রাঞ্চে পুশ করুন
+git push origin main
